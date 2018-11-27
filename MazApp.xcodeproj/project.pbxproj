@@ -15,6 +15,11 @@
 		B3A9942221ADD8AA00A36C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A9942021ADD8AA00A36C21 /* Main.storyboard */; };
 		B3A9942421ADD8AC00A36C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A9942321ADD8AC00A36C21 /* Assets.xcassets */; };
 		B3A9942721ADD8AC00A36C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A9942521ADD8AC00A36C21 /* LaunchScreen.storyboard */; };
+		B3A9943121ADDB8500A36C21 /* Character.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943021ADDB8500A36C21 /* Character.scn */; };
+		B3A9943321ADDF6D00A36C21 /* Skin.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943221ADDF6D00A36C21 /* Skin.png */; };
+		B3A9943521ADE33D00A36C21 /* mainScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943421ADE33D00A36C21 /* mainScene.scn */; };
+		B3A9943721ADE47100A36C21 /* PortalFloor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */; };
+		B3A9943B21ADE56300A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		B3A9942321ADD8AC00A36C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3A9942621ADD8AC00A36C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3A9942821ADD8AC00A36C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3A9943021ADDB8500A36C21 /* Character.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Character.scn; sourceTree = "<group>"; };
+		B3A9943221ADDF6D00A36C21 /* Skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skin.png; sourceTree = "<group>"; };
+		B3A9943421ADE33D00A36C21 /* mainScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mainScene.scn; sourceTree = "<group>"; };
+		B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PortalFloor.jpeg; sourceTree = "<group>"; };
+		B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +71,16 @@
 			isa = PBXGroup;
 			children = (
 				B3A9941621ADD8AA00A36C21 /* AppDelegate.swift */,
+				B3A9943021ADDB8500A36C21 /* Character.scn */,
+				B3A9943421ADE33D00A36C21 /* mainScene.scn */,
 				B3A9941821ADD8AA00A36C21 /* GameScene.sks */,
 				B3A9941A21ADD8AA00A36C21 /* Actions.sks */,
 				B3A9941C21ADD8AA00A36C21 /* GameScene.swift */,
 				B3A9941E21ADD8AA00A36C21 /* GameViewController.swift */,
 				B3A9942021ADD8AA00A36C21 /* Main.storyboard */,
+				B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */,
+				B3A9943221ADDF6D00A36C21 /* Skin.png */,
+				B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */,
 				B3A9942321ADD8AC00A36C21 /* Assets.xcassets */,
 				B3A9942521ADD8AC00A36C21 /* LaunchScreen.storyboard */,
 				B3A9942821ADD8AC00A36C21 /* Info.plist */,
@@ -105,6 +120,7 @@
 				TargetAttributes = {
 					B3A9941221ADD8AA00A36C21 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -131,6 +147,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A9943721ADE47100A36C21 /* PortalFloor.jpeg in Resources */,
+				B3A9943B21ADE56300A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg in Resources */,
+				B3A9943121ADDB8500A36C21 /* Character.scn in Resources */,
+				B3A9943321ADDF6D00A36C21 /* Skin.png in Resources */,
+				B3A9943521ADE33D00A36C21 /* mainScene.scn in Resources */,
 				B3A9942221ADD8AA00A36C21 /* Main.storyboard in Resources */,
 				B3A9941921ADD8AA00A36C21 /* GameScene.sks in Resources */,
 				B3A9942421ADD8AC00A36C21 /* Assets.xcassets in Resources */,
@@ -297,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XCN9L8EXJW;
 				INFOPLIST_FILE = MazApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XCN9L8EXJW;
 				INFOPLIST_FILE = MazApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
