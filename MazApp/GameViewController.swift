@@ -11,7 +11,10 @@ import SpriteKit
 import GameplayKit
 import SceneKit
 
-class GameViewController: UIViewController, SCNSceneRendererDelegate{
+class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysicsContactDelegate{
+    
+    let CategoryExit = 4;
+    var contador = 0;
     
     static var offset: Float = 3;
     
@@ -38,12 +41,14 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate{
     var scene: SCNScene!;
     
     var characterNode: SCNNode!;
+    var exitNode: SCNNode!;
+//    var wallsNode: SCNNode!;
     var cameraNode: SCNNode!;
     
 //    let playerNode = CharacterNode();
     var touch: UITouch?;
     var direction = float2(0, 0);
-    let speed: Float = 0.1;
+    var speed: Float = 0.1;
     
     var sounds:[String:SCNAudioSource] = [:];
     
@@ -65,6 +70,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate{
 //        sceneView.allowsCameraControl = true;
         scene = SCNScene(named: "mainScene.scn");
         sceneView.scene = scene;
+        scene.physicsWorld.contactDelegate = self;
         
         let tapRecognizer = UITapGestureRecognizer();
         tapRecognizer.numberOfTapsRequired = 1;
@@ -92,14 +98,23 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate{
 //        walkInDirection(directionInV3)
         let currentPosition = float3(characterNode.position);
         characterNode.position = SCNVector3(currentPosition + directionInV3 * speed);
-        cameraNode.position.x = characterNode.presentation.position.x;
-        cameraNode.position.z = characterNode.presentation.position.z + GameViewController.offset;
+        cameraNode.position.y = characterNode.presentation.position.y + 1 /*+ GameViewController.offset*/;
+        cameraNode.position.x = characterNode.presentation.position.x /*- GameViewController.offset;*/
+        cameraNode.position.z = characterNode.presentation.position.z + 3 /*+ GameViewController.offset*/;
     }
     
     func setupNodes(){
         characterNode = scene.rootNode.childNode(withName: "Character", recursively: true)!;
 //        characterNode = CharacterNode.init();
+        characterNode.physicsBody?.contactTestBitMask = CategoryExit;
         cameraNode = scene.rootNode.childNode(withName: "firstPerson", recursively: true)!;
+        exitNode = scene.rootNode.childNode(withName: "exit", recursively: true)!;
+//        wallsNode = scene.rootNode.childNode(withName: "wall", recursively: true)!;
+//        let wallShape: SCNPhysicsShape = SCNPhysicsShape(geometry: wallsNode.geometry!, options: nil);
+//        wallsNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: wallShape);
+//        wallsNode.physicsBody?.restitution = 1;
+//        wallsNode.physicsBody?.isAffectedByGravity = false;
+        
     }
     
     func setupSounds(){
@@ -108,6 +123,11 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate{
         stepSound.load();
         stepSound.volume = 0.3;
         sounds["steps"] = stepSound;
+        
+        let magicSound = SCNAudioSource(fileNamed: "magic.wav")!;
+        magicSound.load();
+        magicSound.volume = 0.3;
+        sounds["magic"] = magicSound;
         
         let menuSound = SCNAudioSource(fileNamed: "menu.mp3")!;
         menuSound.volume = 0.1;
@@ -159,13 +179,14 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate{
 extension GameViewController {
     // store touch in global scope
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touch = touches.first
+        touch = touches.first;
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touch {
             
             let touchLocation = touch.location(in: self.view)
             if gameView.virtualDPad().contains(touchLocation) {
+                speed = 0.1;
                 let middleOfCircleX = gameView.virtualDPad().origin.x + 75
                 let middleOfCircleY = gameView.virtualDPad().origin.y + 75
                 let lengthOfX = Float(touchLocation.x - middleOfCircleX)
@@ -178,6 +199,24 @@ extension GameViewController {
         }
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touch = nil;
+        speed = 0;
     }
+    
+    func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+        
+        var contactNode: SCNNode!;
+        
+        if (contact.nodeA.name == "Character"){
+            contactNode = contact.nodeB;
+        }else{
+            contactNode = contact.nodeA;
+        }
+        
+        if (contactNode.physicsBody?.categoryBitMask == CategoryExit){
+            let magicSound = sounds["magic"]!;
+            characterNode.runAction(SCNAction.playAudio(magicSound, waitForCompletion: false));
+            exitNode.isHidden = true;
+        }
+    }
+    
 }

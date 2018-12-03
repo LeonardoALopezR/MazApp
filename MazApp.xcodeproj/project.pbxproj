@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B302821B21B5B60200641232 /* exit.scn in Resources */ = {isa = PBXBuildFile; fileRef = B302821A21B5B60200641232 /* exit.scn */; };
+		B302821D21B5BB1F00641232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B302821C21B5BB1F00641232 /* ViewController.swift */; };
+		B302821F21B5C18800641232 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B302821E21B5C18700641232 /* Images */; };
+		B302822121B5C38B00641232 /* magic.wav in Resources */ = {isa = PBXBuildFile; fileRef = B302822021B5C38A00641232 /* magic.wav */; };
 		B3A9941721ADD8AA00A36C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9941621ADD8AA00A36C21 /* AppDelegate.swift */; };
-		B3A9941921ADD8AA00A36C21 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3A9941821ADD8AA00A36C21 /* GameScene.sks */; };
-		B3A9941B21ADD8AA00A36C21 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3A9941A21ADD8AA00A36C21 /* Actions.sks */; };
-		B3A9941D21ADD8AA00A36C21 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9941C21ADD8AA00A36C21 /* GameScene.swift */; };
 		B3A9941F21ADD8AA00A36C21 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9941E21ADD8AA00A36C21 /* GameViewController.swift */; };
 		B3A9942221ADD8AA00A36C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A9942021ADD8AA00A36C21 /* Main.storyboard */; };
 		B3A9942421ADD8AC00A36C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A9942321ADD8AC00A36C21 /* Assets.xcassets */; };
@@ -19,20 +20,20 @@
 		B3A9943321ADDF6D00A36C21 /* Skin.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943221ADDF6D00A36C21 /* Skin.png */; };
 		B3A9943721ADE47100A36C21 /* PortalFloor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */; };
 		B3A9943B21ADE56300A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */; };
-		B3E2965F21B4B7AC003F67A8 /* mainScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3E2965E21B4B7AC003F67A8 /* mainScene.scn */; };
+		B3E26E9F21B5942800F2B725 /* maze1.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3E26E9E21B5942800F2B725 /* maze1.scn */; };
+		B3E26EA121B595C800F2B725 /* mainScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3E26EA021B595C800F2B725 /* mainScene.scn */; };
 		B3E2966121B4BD7D003F67A8 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3E2966021B4BD7D003F67A8 /* menu.mp3 */; };
 		B3E2966521B4BFA0003F67A8 /* footsteps.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3E2966421B4BFA0003F67A8 /* footsteps.wav */; };
 		B3E47D6821B5699700FB5892 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47D6721B5699700FB5892 /* GameView.swift */; };
-		B3E47D6C21B56FE400FB5892 /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47D6B21B56FE400FB5892 /* CharacterNode.swift */; };
-		B3E47D6E21B57F9C00FB5892 /* cone.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3E47D6D21B57F9C00FB5892 /* cone.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B302821A21B5B60200641232 /* exit.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = exit.scn; sourceTree = "<group>"; };
+		B302821C21B5BB1F00641232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B302821E21B5C18700641232 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		B302822021B5C38A00641232 /* magic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = magic.wav; sourceTree = "<group>"; };
 		B3A9941321ADD8AA00A36C21 /* MazApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A9941621ADD8AA00A36C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3A9941821ADD8AA00A36C21 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		B3A9941A21ADD8AA00A36C21 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		B3A9941C21ADD8AA00A36C21 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		B3A9941E21ADD8AA00A36C21 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B3A9942121ADD8AA00A36C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3A9942321ADD8AC00A36C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,12 +43,11 @@
 		B3A9943221ADDF6D00A36C21 /* Skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skin.png; sourceTree = "<group>"; };
 		B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PortalFloor.jpeg; sourceTree = "<group>"; };
 		B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg; sourceTree = "<group>"; };
-		B3E2965E21B4B7AC003F67A8 /* mainScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mainScene.scn; sourceTree = "<group>"; };
+		B3E26E9E21B5942800F2B725 /* maze1.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = maze1.scn; sourceTree = "<group>"; };
+		B3E26EA021B595C800F2B725 /* mainScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mainScene.scn; sourceTree = "<group>"; };
 		B3E2966021B4BD7D003F67A8 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu.mp3; sourceTree = "<group>"; };
 		B3E2966421B4BFA0003F67A8 /* footsteps.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = footsteps.wav; sourceTree = "<group>"; };
 		B3E47D6721B5699700FB5892 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		B3E47D6B21B56FE400FB5892 /* CharacterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
-		B3E47D6D21B57F9C00FB5892 /* cone.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cone.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,20 +82,20 @@
 			children = (
 				B3A9941621ADD8AA00A36C21 /* AppDelegate.swift */,
 				B3A9943021ADDB8500A36C21 /* Character.scn */,
-				B3E2965E21B4B7AC003F67A8 /* mainScene.scn */,
-				B3E47D6D21B57F9C00FB5892 /* cone.scn */,
-				B3A9941821ADD8AA00A36C21 /* GameScene.sks */,
-				B3A9941A21ADD8AA00A36C21 /* Actions.sks */,
-				B3E47D6B21B56FE400FB5892 /* CharacterNode.swift */,
+				B3E26EA021B595C800F2B725 /* mainScene.scn */,
+				B302821A21B5B60200641232 /* exit.scn */,
+				B3E26E9E21B5942800F2B725 /* maze1.scn */,
 				B3E47D6721B5699700FB5892 /* GameView.swift */,
-				B3A9941C21ADD8AA00A36C21 /* GameScene.swift */,
 				B3A9941E21ADD8AA00A36C21 /* GameViewController.swift */,
 				B3A9942021ADD8AA00A36C21 /* Main.storyboard */,
+				B302821C21B5BB1F00641232 /* ViewController.swift */,
+				B302822021B5C38A00641232 /* magic.wav */,
 				B3E2966421B4BFA0003F67A8 /* footsteps.wav */,
 				B3E2966021B4BD7D003F67A8 /* menu.mp3 */,
 				B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */,
 				B3A9943221ADDF6D00A36C21 /* Skin.png */,
 				B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */,
+				B302821E21B5C18700641232 /* Images */,
 				B3A9942321ADD8AC00A36C21 /* Assets.xcassets */,
 				B3A9942521ADD8AC00A36C21 /* LaunchScreen.storyboard */,
 				B3A9942821ADD8AC00A36C21 /* Info.plist */,
@@ -162,19 +162,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B302821B21B5B60200641232 /* exit.scn in Resources */,
 				B3A9943721ADE47100A36C21 /* PortalFloor.jpeg in Resources */,
-				B3E47D6E21B57F9C00FB5892 /* cone.scn in Resources */,
 				B3A9943B21ADE56300A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg in Resources */,
+				B3E26EA121B595C800F2B725 /* mainScene.scn in Resources */,
 				B3A9943121ADDB8500A36C21 /* Character.scn in Resources */,
 				B3E2966121B4BD7D003F67A8 /* menu.mp3 in Resources */,
 				B3E2966521B4BFA0003F67A8 /* footsteps.wav in Resources */,
 				B3A9943321ADDF6D00A36C21 /* Skin.png in Resources */,
+				B302822121B5C38B00641232 /* magic.wav in Resources */,
 				B3A9942221ADD8AA00A36C21 /* Main.storyboard in Resources */,
-				B3A9941921ADD8AA00A36C21 /* GameScene.sks in Resources */,
-				B3E2965F21B4B7AC003F67A8 /* mainScene.scn in Resources */,
+				B302821F21B5C18800641232 /* Images in Resources */,
 				B3A9942421ADD8AC00A36C21 /* Assets.xcassets in Resources */,
+				B3E26E9F21B5942800F2B725 /* maze1.scn in Resources */,
 				B3A9942721ADD8AC00A36C21 /* LaunchScreen.storyboard in Resources */,
-				B3A9941B21ADD8AA00A36C21 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E47D6C21B56FE400FB5892 /* CharacterNode.swift in Sources */,
-				B3A9941D21ADD8AA00A36C21 /* GameScene.swift in Sources */,
+				B302821D21B5BB1F00641232 /* ViewController.swift in Sources */,
 				B3A9941F21ADD8AA00A36C21 /* GameViewController.swift in Sources */,
 				B3E47D6821B5699700FB5892 /* GameView.swift in Sources */,
 				B3A9941721ADD8AA00A36C21 /* AppDelegate.swift in Sources */,
