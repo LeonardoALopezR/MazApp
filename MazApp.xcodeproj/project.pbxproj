@@ -17,9 +17,14 @@
 		B3A9942721ADD8AC00A36C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A9942521ADD8AC00A36C21 /* LaunchScreen.storyboard */; };
 		B3A9943121ADDB8500A36C21 /* Character.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943021ADDB8500A36C21 /* Character.scn */; };
 		B3A9943321ADDF6D00A36C21 /* Skin.png in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943221ADDF6D00A36C21 /* Skin.png */; };
-		B3A9943521ADE33D00A36C21 /* mainScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943421ADE33D00A36C21 /* mainScene.scn */; };
 		B3A9943721ADE47100A36C21 /* PortalFloor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */; };
 		B3A9943B21ADE56300A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */; };
+		B3E2965F21B4B7AC003F67A8 /* mainScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3E2965E21B4B7AC003F67A8 /* mainScene.scn */; };
+		B3E2966121B4BD7D003F67A8 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3E2966021B4BD7D003F67A8 /* menu.mp3 */; };
+		B3E2966521B4BFA0003F67A8 /* footsteps.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3E2966421B4BFA0003F67A8 /* footsteps.wav */; };
+		B3E47D6821B5699700FB5892 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47D6721B5699700FB5892 /* GameView.swift */; };
+		B3E47D6C21B56FE400FB5892 /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47D6B21B56FE400FB5892 /* CharacterNode.swift */; };
+		B3E47D6E21B57F9C00FB5892 /* cone.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3E47D6D21B57F9C00FB5892 /* cone.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +40,14 @@
 		B3A9942821ADD8AC00A36C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3A9943021ADDB8500A36C21 /* Character.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Character.scn; sourceTree = "<group>"; };
 		B3A9943221ADDF6D00A36C21 /* Skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skin.png; sourceTree = "<group>"; };
-		B3A9943421ADE33D00A36C21 /* mainScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mainScene.scn; sourceTree = "<group>"; };
 		B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PortalFloor.jpeg; sourceTree = "<group>"; };
 		B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg; sourceTree = "<group>"; };
+		B3E2965E21B4B7AC003F67A8 /* mainScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mainScene.scn; sourceTree = "<group>"; };
+		B3E2966021B4BD7D003F67A8 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu.mp3; sourceTree = "<group>"; };
+		B3E2966421B4BFA0003F67A8 /* footsteps.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = footsteps.wav; sourceTree = "<group>"; };
+		B3E47D6721B5699700FB5892 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B3E47D6B21B56FE400FB5892 /* CharacterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
+		B3E47D6D21B57F9C00FB5892 /* cone.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cone.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +82,17 @@
 			children = (
 				B3A9941621ADD8AA00A36C21 /* AppDelegate.swift */,
 				B3A9943021ADDB8500A36C21 /* Character.scn */,
-				B3A9943421ADE33D00A36C21 /* mainScene.scn */,
+				B3E2965E21B4B7AC003F67A8 /* mainScene.scn */,
+				B3E47D6D21B57F9C00FB5892 /* cone.scn */,
 				B3A9941821ADD8AA00A36C21 /* GameScene.sks */,
 				B3A9941A21ADD8AA00A36C21 /* Actions.sks */,
+				B3E47D6B21B56FE400FB5892 /* CharacterNode.swift */,
+				B3E47D6721B5699700FB5892 /* GameView.swift */,
 				B3A9941C21ADD8AA00A36C21 /* GameScene.swift */,
 				B3A9941E21ADD8AA00A36C21 /* GameViewController.swift */,
 				B3A9942021ADD8AA00A36C21 /* Main.storyboard */,
+				B3E2966421B4BFA0003F67A8 /* footsteps.wav */,
+				B3E2966021B4BD7D003F67A8 /* menu.mp3 */,
 				B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */,
 				B3A9943221ADDF6D00A36C21 /* Skin.png */,
 				B3A9943A21ADE56200A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg */,
@@ -148,12 +163,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A9943721ADE47100A36C21 /* PortalFloor.jpeg in Resources */,
+				B3E47D6E21B57F9C00FB5892 /* cone.scn in Resources */,
 				B3A9943B21ADE56300A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg in Resources */,
 				B3A9943121ADDB8500A36C21 /* Character.scn in Resources */,
+				B3E2966121B4BD7D003F67A8 /* menu.mp3 in Resources */,
+				B3E2966521B4BFA0003F67A8 /* footsteps.wav in Resources */,
 				B3A9943321ADDF6D00A36C21 /* Skin.png in Resources */,
-				B3A9943521ADE33D00A36C21 /* mainScene.scn in Resources */,
 				B3A9942221ADD8AA00A36C21 /* Main.storyboard in Resources */,
 				B3A9941921ADD8AA00A36C21 /* GameScene.sks in Resources */,
+				B3E2965F21B4B7AC003F67A8 /* mainScene.scn in Resources */,
 				B3A9942421ADD8AC00A36C21 /* Assets.xcassets in Resources */,
 				B3A9942721ADD8AC00A36C21 /* LaunchScreen.storyboard in Resources */,
 				B3A9941B21ADD8AA00A36C21 /* Actions.sks in Resources */,
@@ -167,8 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E47D6C21B56FE400FB5892 /* CharacterNode.swift in Sources */,
 				B3A9941D21ADD8AA00A36C21 /* GameScene.swift in Sources */,
 				B3A9941F21ADD8AA00A36C21 /* GameViewController.swift in Sources */,
+				B3E47D6821B5699700FB5892 /* GameView.swift in Sources */,
 				B3A9941721ADD8AA00A36C21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ejemplo.MazApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -345,7 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ejemplo.MazApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
