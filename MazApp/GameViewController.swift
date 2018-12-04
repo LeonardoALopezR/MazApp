@@ -14,6 +14,7 @@ import SceneKit
 class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysicsContactDelegate{
     
     var Nivel = 1;
+    var llave1 = false;
     var puntuacion = 0;
     let CategoryExit = 4;
     let CategotyEnemy = 8;
@@ -145,6 +146,16 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         enemySound.volume = 0.3;
         sounds["enemy"] = enemySound;
         
+        let keySound = SCNAudioSource(fileNamed: "key.wav")!;
+        keySound.load();
+        keySound.volume = 0.5;
+        sounds["key"] = keySound;
+        
+        let greenDoorSound = SCNAudioSource(fileNamed: "lockedDoor.wav")!;
+        greenDoorSound.load();
+        greenDoorSound.volume = 0.3;
+        sounds["lockedDoor"] = greenDoorSound;
+        
         let menuSound = SCNAudioSource(fileNamed: "menu.mp3")!;
         menuSound.volume = 0.1;
         menuSound.loops = true;
@@ -219,6 +230,7 @@ extension GameViewController {
     }
     
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+       
         
         var contactNode: SCNNode!;
         
@@ -227,7 +239,8 @@ extension GameViewController {
         }else{
             contactNode = contact.nodeA;
         }
-        
+//        puntuacion+=1
+//         print(contactNode.physicsBody?.categoryBitMask, puntuacion);
         if (contactNode.physicsBody?.categoryBitMask == CategoryExit){
             Nivel += 1;
             puntuacion += 100;
@@ -237,18 +250,18 @@ extension GameViewController {
             let magicSound = sounds["magic"]!;
             let playSound = SCNAction.playAudio(magicSound, waitForCompletion: false);
             exitNode.runAction(playSound);
-            exitNode.isHidden = true;
+//            exitNode.isHidden = true;
 //            characterNode.isHidden = true;
             
-            switch Nivel{
-            case 2:
+//            switch Nivel{
+//            case 2:
 //                let moveTo = SCNAction.move(to: SCNVector3Make(1, 1, 1), duration: 1);
-                let moveBy = SCNAction.moveBy(x: -14, y: 0, z: 0, duration: 1)
+                let moveBy = SCNAction.moveBy(x: -5, y: 0, z: 0, duration: 1)
                 characterNode.runAction(moveBy);
-                break;
-            default:
-                print(#function);
-            }
+//                break;
+//            default:
+//                print(#function);
+//            }
 //            let waitAction = SCNAction.wait(duration: 3);
 //            let unhideAction = SCNAction.run{(node) in
 //                node.isHidden = false;
@@ -256,14 +269,26 @@ extension GameViewController {
 //            let actionSequence = SCNAction.sequence([waitAction,unhideAction]);
 //            characterNode.runAction(actionSequence);
         }else if(contactNode.physicsBody?.categoryBitMask == CategotyEnemy){
-            puntuacion -= 50;
+            puntuacion -= 1;
             let enemySound = sounds["enemy"]!;
             let playSound = SCNAction.playAudio(enemySound, waitForCompletion: false);
             enemyNode.runAction(playSound);
             let moveBy = SCNAction.moveBy(x: 1, y: 0, z: 0, duration: 1)
             characterNode.runAction(moveBy);
         }else if(contactNode.physicsBody?.categoryBitMask == CategoryKey){
-            
+            puntuacion += 10;
+            llave1 = true;
+            let keySound = sounds["key"]!;
+            let playSound = SCNAction.playAudio(keySound, waitForCompletion: false);
+            characterNode.runAction(playSound);
+            keyNode.isHidden = true;
+        }else if(contactNode.physicsBody?.categoryBitMask == CategoryGreenDoor){
+            if(llave1 == true){
+                greenDoorNode.isHidden = true;
+                let greenDoorSound = sounds["lockedDoor"]!;
+                let playSound = SCNAction.playAudio(greenDoorSound, waitForCompletion: false);
+                characterNode.runAction(playSound);
+            }
         }
     }
     
