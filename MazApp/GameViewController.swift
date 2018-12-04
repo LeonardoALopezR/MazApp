@@ -13,6 +13,7 @@ import SceneKit
 
 class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysicsContactDelegate{
     
+    var Nivel = 1;
     let CategoryExit = 4;
     var contador = 0;
     
@@ -48,7 +49,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
 //    let playerNode = CharacterNode();
     var touch: UITouch?;
     var direction = float2(0, 0);
-    var speed: Float = 0.1;
+    var speed: Float = 0.05;
     
     var sounds:[String:SCNAudioSource] = [:];
     
@@ -186,7 +187,7 @@ extension GameViewController {
             
             let touchLocation = touch.location(in: self.view)
             if gameView.virtualDPad().contains(touchLocation) {
-                speed = 0.1;
+                speed = 0.05;
                 let middleOfCircleX = gameView.virtualDPad().origin.x + 75
                 let middleOfCircleY = gameView.virtualDPad().origin.y + 75
                 let lengthOfX = Float(touchLocation.x - middleOfCircleX)
@@ -213,9 +214,30 @@ extension GameViewController {
         }
         
         if (contactNode.physicsBody?.categoryBitMask == CategoryExit){
-            let magicSound = sounds["magic"]!;
-            characterNode.runAction(SCNAction.playAudio(magicSound, waitForCompletion: false));
+            Nivel += 1;
+            let alert = UIAlertController(title: "¡Felicidades!", message: "Haz superado el primer nivel", preferredStyle: .alert);
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil));
+            self.present(alert, animated: true);
+//            let magicSound = sounds["magic"]!;
+//            let playSound = SCNAction.playAudio(magicSound, waitForCompletion: false);
             exitNode.isHidden = true;
+            characterNode.isHidden = true;
+            
+            switch Nivel{
+            case 2:
+//                let moveTo = SCNAction.move(to: SCNVector3Make(1, 1, 1), duration: 1);
+                let moveBy = SCNAction.moveBy(x: -14, y: 0, z: 0, duration: 1)
+                characterNode.runAction(moveBy);
+                break;
+            default:
+                print(#function);
+            }
+            let waitAction = SCNAction.wait(duration: 3);
+            let unhideAction = SCNAction.run{(node) in
+                node.isHidden = false;
+            }
+            let actionSequence = SCNAction.sequence([/*playSound,*/waitAction,unhideAction]);
+            characterNode.runAction(actionSequence);
         }
     }
     
