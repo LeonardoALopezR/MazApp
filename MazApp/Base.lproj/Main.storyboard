@@ -299,7 +299,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QdQ-mU-hbM">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="236" text="Muevete con el circulo que aparece en pantalla, y si tocas a tu personaje sonará algo dentro de él" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xt-pB-UiP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="236" text="Muévete con el círculo que aparece en pantalla, y si tocas a tu personaje sonará algo dentro de él" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xt-pB-UiP">
                                         <rect key="frame" x="0.0" y="0.0" width="667" height="133"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <nil key="textColor"/>
@@ -443,9 +443,10 @@
         <image name="salida.png" width="171" height="190"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="PL3-P3-tQL"/>
         <segue reference="gfN-0O-CDj"/>
         <segue reference="CWr-ph-ijH"/>
         <segue reference="7XD-tC-nXn"/>
-        <segue reference="fYt-aQ-fdT"/>
+        <segue reference="07b-MO-7vx"/>
     </inferredMetricsTieBreakers>
 </document>

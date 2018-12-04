@@ -256,7 +256,7 @@ extension GameViewController {
 //            switch Nivel{
 //            case 2:
 //                let moveTo = SCNAction.move(to: SCNVector3Make(1, 1, 1), duration: 1);
-                let moveBy = SCNAction.moveBy(x: -5, y: 0, z: 0, duration: 1)
+                let moveBy = SCNAction.moveBy(x: -8, y: 0, z: 0, duration: 1)
                 characterNode.runAction(moveBy);
 //                break;
 //            default:
@@ -289,7 +289,10 @@ extension GameViewController {
                 let playSound = SCNAction.playAudio(greenDoorSound, waitForCompletion: false);
                 characterNode.runAction(playSound);
             }
+        }else if(contactNode.physicsBody!.categoryBitMask == -1){
+            speed = 0;
         }
+//        speed = 0.05;
     }
     
 }
