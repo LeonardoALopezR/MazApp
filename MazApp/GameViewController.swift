@@ -14,7 +14,7 @@ import SceneKit
 class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysicsContactDelegate{
     
     var Nivel = 1;
-    var llave1 = false;
+    var llave1 = 0;
     var puntuacion = 0;
     let CategoryExit = 4;
     let CategotyEnemy = 8;
@@ -277,17 +277,18 @@ extension GameViewController {
             characterNode.runAction(moveBy);
         }else if(contactNode.physicsBody?.categoryBitMask == CategoryKey){
             puntuacion += 10;
-            llave1 = true;
+            llave1 += 1;
             let keySound = sounds["key"]!;
             let playSound = SCNAction.playAudio(keySound, waitForCompletion: false);
             characterNode.runAction(playSound);
             keyNode.isHidden = true;
         }else if(contactNode.physicsBody?.categoryBitMask == CategoryGreenDoor){
-            if(llave1 == true){
+            if(llave1 > 0){
                 greenDoorNode.isHidden = true;
                 let greenDoorSound = sounds["lockedDoor"]!;
                 let playSound = SCNAction.playAudio(greenDoorSound, waitForCompletion: false);
                 characterNode.runAction(playSound);
+                llave1 -= 1;
             }
         }else if(contactNode.physicsBody!.categoryBitMask == -1){
             speed = 0;

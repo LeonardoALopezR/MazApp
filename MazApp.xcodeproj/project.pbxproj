@@ -39,6 +39,7 @@
 		B3E5E9B021B7158400DE56ED /* juego.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9AF21B7158300DE56ED /* juego.png */; };
 		B3E5E9B221B71A8C00DE56ED /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9B121B71A8B00DE56ED /* key.png */; };
 		B3E5E9B421B71A9200DE56ED /* locked.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9B321B71A9200DE56ED /* locked.png */; };
+		B3E5E9B621B7212500DE56ED /* maze3.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9B521B7212500DE56ED /* maze3.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		B3E5E9AF21B7158300DE56ED /* juego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = juego.png; path = ../../../juego.png; sourceTree = "<group>"; };
 		B3E5E9B121B71A8B00DE56ED /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 		B3E5E9B321B71A9200DE56ED /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
+		B3E5E9B521B7212500DE56ED /* maze3.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = maze3.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				B302821A21B5B60200641232 /* exit.scn */,
 				B3E26E9E21B5942800F2B725 /* maze1.scn */,
 				B39E7D4521B5FE940097CD56 /* maze2.scn */,
+				B3E5E9B521B7212500DE56ED /* maze3.scn */,
 				B3E47D6721B5699700FB5892 /* GameView.swift */,
 				B3A9941E21ADD8AA00A36C21 /* GameViewController.swift */,
 				B3A9942021ADD8AA00A36C21 /* Main.storyboard */,
@@ -208,6 +211,7 @@
 				B39E7D4621B5FE940097CD56 /* maze2.scn in Resources */,
 				B302821B21B5B60200641232 /* exit.scn in Resources */,
 				B3A9943721ADE47100A36C21 /* PortalFloor.jpeg in Resources */,
+				B3E5E9B621B7212500DE56ED /* maze3.scn in Resources */,
 				B3A9943B21ADE56300A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg in Resources */,
 				B3E5E9A821B710C100DE56ED /* character.png in Resources */,
 				B3E5E9B021B7158400DE56ED /* juego.png in Resources */,
