@@ -14,7 +14,11 @@ import SceneKit
 class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysicsContactDelegate{
     
     var Nivel = 1;
+    var puntuacion = 0;
     let CategoryExit = 4;
+    let CategotyEnemy = 8;
+    let CategoryKey = 16;
+    let CategoryGreenDoor = 32;
     var contador = 0;
     
     static var offset: Float = 3;
@@ -42,7 +46,10 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
     var scene: SCNScene!;
     
     var characterNode: SCNNode!;
+    var enemyNode: SCNNode!;
     var exitNode: SCNNode!;
+    var keyNode: SCNNode!;
+    var greenDoorNode: SCNNode!;
 //    var wallsNode: SCNNode!;
     var cameraNode: SCNNode!;
     
@@ -107,9 +114,12 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
     func setupNodes(){
         characterNode = scene.rootNode.childNode(withName: "Character", recursively: true)!;
 //        characterNode = CharacterNode.init();
-        characterNode.physicsBody?.contactTestBitMask = CategoryExit;
+        characterNode.physicsBody?.contactTestBitMask = CategoryExit | CategotyEnemy | CategoryKey | CategoryGreenDoor;
         cameraNode = scene.rootNode.childNode(withName: "firstPerson", recursively: true)!;
         exitNode = scene.rootNode.childNode(withName: "exit", recursively: true)!;
+        enemyNode = scene.rootNode.childNode(withName: "enemy", recursively: true)!;
+        keyNode = scene.rootNode.childNode(withName: "key", recursively: true)!;
+        greenDoorNode = scene.rootNode.childNode(withName: "greenDoor", recursively: true)!;
 //        wallsNode = scene.rootNode.childNode(withName: "wall", recursively: true)!;
 //        let wallShape: SCNPhysicsShape = SCNPhysicsShape(geometry: wallsNode.geometry!, options: nil);
 //        wallsNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: wallShape);
@@ -122,13 +132,18 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         
         let stepSound = SCNAudioSource(fileNamed: "footsteps.wav")!;
         stepSound.load();
-        stepSound.volume = 0.3;
+        stepSound.volume = 0.5;
         sounds["steps"] = stepSound;
         
         let magicSound = SCNAudioSource(fileNamed: "magic.wav")!;
         magicSound.load();
-        magicSound.volume = 0.3;
+        magicSound.volume = 0.5;
         sounds["magic"] = magicSound;
+        
+        let enemySound = SCNAudioSource(fileNamed: "enemy.wav")!;
+        enemySound.load();
+        enemySound.volume = 0.3;
+        sounds["enemy"] = enemySound;
         
         let menuSound = SCNAudioSource(fileNamed: "menu.mp3")!;
         menuSound.volume = 0.1;
@@ -215,13 +230,15 @@ extension GameViewController {
         
         if (contactNode.physicsBody?.categoryBitMask == CategoryExit){
             Nivel += 1;
-            let alert = UIAlertController(title: "¡Felicidades!", message: "Haz superado el primer nivel", preferredStyle: .alert);
+            puntuacion += 100;
+            let alert = UIAlertController(title: "¡Felicidades!", message: "Haz superado el nivel \n Puntuación: \(puntuacion)", preferredStyle: .alert);
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil));
             self.present(alert, animated: true);
-//            let magicSound = sounds["magic"]!;
-//            let playSound = SCNAction.playAudio(magicSound, waitForCompletion: false);
+            let magicSound = sounds["magic"]!;
+            let playSound = SCNAction.playAudio(magicSound, waitForCompletion: false);
+            exitNode.runAction(playSound);
             exitNode.isHidden = true;
-            characterNode.isHidden = true;
+//            characterNode.isHidden = true;
             
             switch Nivel{
             case 2:
@@ -232,12 +249,21 @@ extension GameViewController {
             default:
                 print(#function);
             }
-            let waitAction = SCNAction.wait(duration: 3);
-            let unhideAction = SCNAction.run{(node) in
-                node.isHidden = false;
-            }
-            let actionSequence = SCNAction.sequence([/*playSound,*/waitAction,unhideAction]);
-            characterNode.runAction(actionSequence);
+//            let waitAction = SCNAction.wait(duration: 3);
+//            let unhideAction = SCNAction.run{(node) in
+//                node.isHidden = false;
+//            }
+//            let actionSequence = SCNAction.sequence([waitAction,unhideAction]);
+//            characterNode.runAction(actionSequence);
+        }else if(contactNode.physicsBody?.categoryBitMask == CategotyEnemy){
+            puntuacion -= 50;
+            let enemySound = sounds["enemy"]!;
+            let playSound = SCNAction.playAudio(enemySound, waitForCompletion: false);
+            enemyNode.runAction(playSound);
+            let moveBy = SCNAction.moveBy(x: 1, y: 0, z: 0, duration: 1)
+            characterNode.runAction(moveBy);
+        }else if(contactNode.physicsBody?.categoryBitMask == CategoryKey){
+            
         }
     }
     
