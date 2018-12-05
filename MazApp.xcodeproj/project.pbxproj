@@ -11,6 +11,8 @@
 		B302821D21B5BB1F00641232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B302821C21B5BB1F00641232 /* ViewController.swift */; };
 		B302821F21B5C18800641232 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B302821E21B5C18700641232 /* Images */; };
 		B302822121B5C38B00641232 /* magic.wav in Resources */ = {isa = PBXBuildFile; fileRef = B302822021B5C38A00641232 /* magic.wav */; };
+		B31D29AF21B74D9800E22E80 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = B31D29AE21B74D9800E22E80 /* enemy.png */; };
+		B31D29B121B74DAC00E22E80 /* juego.png in Resources */ = {isa = PBXBuildFile; fileRef = B31D29B021B74DAC00E22E80 /* juego.png */; };
 		B39E7D4621B5FE940097CD56 /* maze2.scn in Resources */ = {isa = PBXBuildFile; fileRef = B39E7D4521B5FE940097CD56 /* maze2.scn */; };
 		B3A9941721ADD8AA00A36C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9941621ADD8AA00A36C21 /* AppDelegate.swift */; };
 		B3A9941F21ADD8AA00A36C21 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9941E21ADD8AA00A36C21 /* GameViewController.swift */; };
@@ -35,8 +37,6 @@
 		B3E5E9A421B70AB200DE56ED /* laberinto.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9A321B70AB200DE56ED /* laberinto.png */; };
 		B3E5E9A621B70B5D00DE56ED /* salida.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9A521B70B5C00DE56ED /* salida.png */; };
 		B3E5E9A821B710C100DE56ED /* character.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9A721B710C100DE56ED /* character.png */; };
-		B3E5E9AC21B7141200DE56ED /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9AB21B7141200DE56ED /* enemy.png */; };
-		B3E5E9B021B7158400DE56ED /* juego.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9AF21B7158300DE56ED /* juego.png */; };
 		B3E5E9B221B71A8C00DE56ED /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9B121B71A8B00DE56ED /* key.png */; };
 		B3E5E9B421B71A9200DE56ED /* locked.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9B321B71A9200DE56ED /* locked.png */; };
 		B3E5E9B621B7212500DE56ED /* maze3.scn in Resources */ = {isa = PBXBuildFile; fileRef = B3E5E9B521B7212500DE56ED /* maze3.scn */; };
@@ -47,6 +47,8 @@
 		B302821C21B5BB1F00641232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B302821E21B5C18700641232 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		B302822021B5C38A00641232 /* magic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = magic.wav; sourceTree = "<group>"; };
+		B31D29AE21B74D9800E22E80 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
+		B31D29B021B74DAC00E22E80 /* juego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juego.png; sourceTree = "<group>"; };
 		B39E7D4521B5FE940097CD56 /* maze2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = maze2.scn; sourceTree = "<group>"; };
 		B3A9941321ADD8AA00A36C21 /* MazApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A9941621ADD8AA00A36C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +75,6 @@
 		B3E5E9A321B70AB200DE56ED /* laberinto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laberinto.png; sourceTree = "<group>"; };
 		B3E5E9A521B70B5C00DE56ED /* salida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salida.png; sourceTree = "<group>"; };
 		B3E5E9A721B710C100DE56ED /* character.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = character.png; sourceTree = "<group>"; };
-		B3E5E9AB21B7141200DE56ED /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy.png; path = ../../../enemy.png; sourceTree = "<group>"; };
-		B3E5E9AF21B7158300DE56ED /* juego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = juego.png; path = ../../../juego.png; sourceTree = "<group>"; };
 		B3E5E9B121B71A8B00DE56ED /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 		B3E5E9B321B71A9200DE56ED /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
 		B3E5E9B521B7212500DE56ED /* maze3.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = maze3.scn; sourceTree = "<group>"; };
@@ -128,13 +128,13 @@
 				B3E5E99F21B6E56A00DE56ED /* key.wav */,
 				B3E5E99921B6D3BD00DE56ED /* enemy.wav */,
 				B302822021B5C38A00641232 /* magic.wav */,
-				B3E5E9AB21B7141200DE56ED /* enemy.png */,
 				B3E2966421B4BFA0003F67A8 /* footsteps.wav */,
 				B3E2966021B4BD7D003F67A8 /* menu.mp3 */,
 				B3E5E9B121B71A8B00DE56ED /* key.png */,
-				B3E5E9AF21B7158300DE56ED /* juego.png */,
+				B31D29AE21B74D9800E22E80 /* enemy.png */,
 				B3E5E9A721B710C100DE56ED /* character.png */,
 				B3E5E9B321B71A9200DE56ED /* locked.png */,
+				B31D29B021B74DAC00E22E80 /* juego.png */,
 				B3E5E9A521B70B5C00DE56ED /* salida.png */,
 				B3E5E9A321B70AB200DE56ED /* laberinto.png */,
 				B3A9943621ADE47100A36C21 /* PortalFloor.jpeg */,
@@ -209,12 +209,13 @@
 			files = (
 				B3E5E99E21B6E04300DE56ED /* greenDoor.scn in Resources */,
 				B39E7D4621B5FE940097CD56 /* maze2.scn in Resources */,
+				B31D29AF21B74D9800E22E80 /* enemy.png in Resources */,
 				B302821B21B5B60200641232 /* exit.scn in Resources */,
 				B3A9943721ADE47100A36C21 /* PortalFloor.jpeg in Resources */,
 				B3E5E9B621B7212500DE56ED /* maze3.scn in Resources */,
+				B31D29B121B74DAC00E22E80 /* juego.png in Resources */,
 				B3A9943B21ADE56300A36C21 /* Perfection_Floor_Natural_Stone_Chevron_Black_Stone.jpg in Resources */,
 				B3E5E9A821B710C100DE56ED /* character.png in Resources */,
-				B3E5E9B021B7158400DE56ED /* juego.png in Resources */,
 				B3E26EA121B595C800F2B725 /* mainScene.scn in Resources */,
 				B3A9943121ADDB8500A36C21 /* Character.scn in Resources */,
 				B3E2966121B4BD7D003F67A8 /* menu.mp3 in Resources */,
@@ -233,7 +234,6 @@
 				B3E5E99A21B6D3BD00DE56ED /* enemy.wav in Resources */,
 				B3E26E9F21B5942800F2B725 /* maze1.scn in Resources */,
 				B3E5E9A621B70B5D00DE56ED /* salida.png in Resources */,
-				B3E5E9AC21B7141200DE56ED /* enemy.png in Resources */,
 				B3A9942721ADD8AC00A36C21 /* LaunchScreen.storyboard in Resources */,
 				B3E5E9B421B71A9200DE56ED /* locked.png in Resources */,
 			);
