@@ -9,6 +9,7 @@ final class GameView: SCNView {
         setup2DOverlay()
     }
     
+//    Se crea un criculo el cual se mostrara por encima de la vista principal en el juego
     func setup2DOverlay() {
         let viewHeight = bounds.size.height
         let viewWidth = bounds.size.width
@@ -26,6 +27,7 @@ final class GameView: SCNView {
         overlaySKScene = skScene
     }
     
+//    Una vez creado se coloca en la posición deseada en la pantalla
     func virtualDPad() -> CGRect {
         var vDPad = CGRect(x: 0, y: 0, width: 150, height: 150)
         vDPad.origin.y = bounds.size.height - vDPad.size.height - 10

@@ -16,14 +16,17 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
     var Nivel = 1;
     var llave1 = false;
     var puntuacion = 0;
+    var contador = 0;
+//    Mapa de colisiones
     let CategoryExit = 4;
     let CategotyEnemy = 8;
     let CategoryKey = 16;
     let CategoryGreenDoor = 32;
-    var contador = 0;
     
+//    offset de la camara
     static var offset: Float = 3;
     
+//    Se castea nuestra vista creada anteriormente (GameView)
     var gameView: GameView {
         return view as! GameView;
     }
@@ -31,7 +34,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
     var directionAngle: SCNFloat = 0.0 {
         didSet {
             if directionAngle != oldValue {
-                // action that rotates the node to an angle in radian.
+                // Se rota al personaje principal, esta acción se cuenta en radianes.
                 let action = SCNAction.rotateTo(
                     x: 0.0,
                     y: CGFloat(directionAngle),
@@ -43,6 +46,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         }
     }
     
+//    Variables para llamar a la escena principal (anteriormente renderizada mainScene.scn)
     var sceneView: SCNView!;
     var scene: SCNScene!;
     
@@ -91,6 +95,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         gameView.isPlaying = true;
     }
     
+
+//En este método se coloca la cámara fija
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
 //        let character = characterNode.presentation;
 //        let characterPosition = character.position;
@@ -112,9 +118,11 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         cameraNode.position.z = characterNode.presentation.position.z + 3 /*+ GameViewController.offset*/;
     }
     
+//    Los nodos son todas las escenas que carga la escena principal (mainScene)
     func setupNodes(){
         characterNode = scene.rootNode.childNode(withName: "Character", recursively: true)!;
 //        characterNode = CharacterNode.init();
+//        Colociones entre el personaje principal y el mundo
         characterNode.physicsBody?.contactTestBitMask = CategoryExit | CategotyEnemy | CategoryKey | CategoryGreenDoor;
         cameraNode = scene.rootNode.childNode(withName: "firstPerson", recursively: true)!;
         exitNode = scene.rootNode.childNode(withName: "exit", recursively: true)!;
@@ -128,6 +136,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
 //        wallsNode.physicsBody?.isAffectedByGravity = false;
         
     }
+    
+//    Se cargan todos los sonidos que tendrá el juego
     
     func setupSounds(){
         
@@ -158,6 +168,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         
         let menuSound = SCNAudioSource(fileNamed: "menu.mp3")!;
         menuSound.volume = 0.1;
+//        Este sonido automaticamente se repite y siempre estara con el personaje principal
         menuSound.loops = true;
         menuSound.load();
         let musicPlayer = SCNAudioPlayer(source: menuSound);
@@ -203,6 +214,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
     }
 }
 
+//Se extiende nuestra clase para poder controlar el Dpad anteriormente creado y mover nuestro personaje
 extension GameViewController {
     // store touch in global scope
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -225,10 +237,12 @@ extension GameViewController {
             }
         }
     }
+//    Se detiene el personaje cuando se deja de tocar el control
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         speed = 0;
     }
     
+//    Gracias al mapa de bits se puede saber que cosa esta tocando el personaje principal
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
        
         
